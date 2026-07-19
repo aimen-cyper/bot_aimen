@@ -1,7 +1,7 @@
 <?php
 $admin = 8431116042;
 $token = "8306869095:AAE7xkGIU5BaLTIcxJVoCR2e0z0RXnNYhNI";
-$brokweb = "https://1d10d478f43b4c.lhr.life";
+$brokweb = "https://botaimen-production.up.railway.app";
 #==================#
 
 #==================#
