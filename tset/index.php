@@ -1,6 +1,6 @@
 <?php
-$admin = 8734728853;
-$token = "8440280233:AAEFXcWn2r4q282T2LqPhXsMo9Nm-iI1c14";
+$admin = 8431116042;
+$token = "8306869095:AAE7xkGIU5BaLTIcxJVoCR2e0z0RXnNYhNI";
 $brokweb = "https://8000-ib2po42b3tda4t9x8qx5w-9d03bd5c.us1.manus.computer";
 #==================#
 $channels = file("database/bot.txt", FILE_IGNORE_NEW_LINES | FILE_SKIP_EMPTY_LINES);
